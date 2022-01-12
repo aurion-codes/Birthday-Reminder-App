@@ -7,10 +7,11 @@ import { useState } from 'react'
 function App() {
 
   const [people, setPeople] = useState(data)
+  console.log(data)
   return (
     <main>
       <section className="container" >
-        <h3>0 birthdays today</h3>
+        <h3>{people.length} Birthdays Today</h3>
         <List people={people}/>
         <button onClick={() => console.log('i have been clicked')}>Clear All</button>
       </section>
